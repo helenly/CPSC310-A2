@@ -115,6 +115,12 @@ public class GitLab implements EntryPoint {
 			
 			flexTable.setText(i+1,3,String.valueOf(user.getWishList().size()));
 		}
+		
+		//thank you message
+		flexTable.setText(users.size()+1,1,"Thank you for shopping with us!");
+		
+		
+		
 //=======
 //>>>>>>> origin/async
 	}
