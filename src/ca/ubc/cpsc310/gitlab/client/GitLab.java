@@ -84,17 +84,18 @@ public class GitLab implements EntryPoint {
 	 */
 	public void displayUsers(List<IUser> users)
 	{
-
+		//welcome message
+		flexTable.setText(0,1,"welcome to our site we hope you buy something");
 		RootPanel.get("root").add(flexTable);
 		
-		flexTable.setText(0,0, "Name");
+		flexTable.setText(1,0, "Name");
 		
-		flexTable.setText(0,1,"Language");
-		flexTable.setText(0,2, "Shopping Cart Size");
-		flexTable.setText(0,3, "Wish List Size");
+		flexTable.setText(1,1,"Language");
+		flexTable.setText(1,2, "Shopping Cart Size");
+		flexTable.setText(1,3, "Wish List Size");
 		flexTable.setStyleName("centered-table", true);
 		
-		for(int i=0; i < users.size(); i++)
+		for(int i=1; i < users.size() + 1; i++)
 		{
 		
 			IUser user = users.get(i);
@@ -117,7 +118,7 @@ public class GitLab implements EntryPoint {
 		}
 		
 		//thank you message
-		flexTable.setText(users.size()+1,1,"Thank you for shopping with us!");
+		flexTable.setText(users.size()+2,1,"Thank you for shopping with us!");
 		
 		
 		
